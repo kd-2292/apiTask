@@ -1,0 +1,8 @@
+require('dotenv').config()
+const http = require('http')
+const app = require('./app')
+
+const PORT = process.env.PORT || 9001
+const server = http.createServer(app)
+
+server.listen(PORT, ()=> console.log(`server listen port : ${PORT}`))

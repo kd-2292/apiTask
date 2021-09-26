@@ -1,0 +1,98 @@
+
+first npm install run command
+
+=======================================================================
+localhost:9090/api/user/register
+
+    method : POST
+    {
+    "name":"user name",
+    "username": "test@gmail.com",
+    "password":"123"
+    }
+========================================================================
+localhost:9090/api/user/login
+
+    method : POST
+    {
+    "username":"test@gmail.com",
+    "password":"123"
+    }
+=========================================================================
+localhost:9090/api/category/add
+
+    method : POST
+
+    authontication token require in header || body || query string
+        3 option to pass token below details mention
+
+       header { "x-access-token" : "token here" }
+       body { "token" : "token here" }
+       query string { "token" : "token here" }
+
+    {
+    "name":"second category",
+    "parent_id: ""  || (optional)
+    }
+
+===========================================================================
+localhost:9090/api/category/list
+
+    method : POST
+
+        authontication token require in header || body || query string
+        3 option to pass token below details mention
+        
+        header {
+           "x-access-token": "token here" 
+        }
+
+        body {
+           "token": "token here" 
+        }
+
+        query string {
+           "token": "token here" 
+        }
+        
+================================================================================
+
+localhost:9090/api/item/add
+
+ method : POST
+
+        authontication token require in header || body || query string
+        3 option to pass token below details mention
+        
+        header {
+           "x-access-token": "token here" 
+        }
+
+        body {
+           "token": "token here" 
+        }
+
+        query string {
+           "token": "token here" 
+        }
+
+    payload
+    {
+    "name":"Pasta item",
+    "price":"11",
+    "qty":"5",
+    "category_id":"615031a0c7993269bbfe985f",
+    "itemImage":"file upload"
+    }
+
+==========================================================================
+
+localhost:9090/api/category/getItemBycategory
+
+ payload
+    {
+    "categoryId":"615031a0c7993269bbfe985f"
+    }
+        
+
+
